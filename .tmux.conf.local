@@ -410,6 +410,9 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # enbale copy text from tmux (OSC 52 needed)
 set -g set-clipboard on
 
+# Fix colors
+set -as terminal-features ",xterm-256color:RGB"
+
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
