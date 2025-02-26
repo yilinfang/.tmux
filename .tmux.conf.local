@@ -407,11 +407,16 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # move status line to top
 #set -g status-position top
 
-# enbale copy text from tmux (OSC 52 needed)
-set -g set-clipboard on
-
 # Fix colors
 set -as terminal-features ",xterm-256color:RGB"
+
+# Enbale copy text from tmux (OSC 52 needed)
+set -g set-clipboard on
+
+# Enable terminal integration features and maintain terminal environment variables across tmux sessions
+set -g allow-passthrough on
+set -ga update-environment TERM
+set -ga update-environment TERM_PROGRAM
 
 # -- tpm -----------------------------------------------------------------------
 
