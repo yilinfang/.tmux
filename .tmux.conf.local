@@ -409,9 +409,9 @@ set -g mode-keys vi
 
 # Fix colors
 # https://github.com/tmux/tmux/wiki/FAQ#how-do-i-use-rgb-colour
-# set -as terminal-overrides ",gnome*:Tc" # Not working for wezterm
+# set -as terminal-overrides ",gnome*:Tc"
 # https://stackoverflow.com/questions/41783367/tmux-tmux-true-color-is-not-working-properly
-set-option -sa terminal-overrides ",xterm*:Tc" # Use this instead
+set-option -sa terminal-overrides ",xterm*:Tc" # Fix wezterm and other xterm-based emulator
 
 # Enbale copy text from tmux (OSC 52 needed)
 # https://github.com/tmux/tmux/wiki/Clipboard
