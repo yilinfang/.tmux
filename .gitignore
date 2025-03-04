@@ -3,5 +3,7 @@ plugins/**
 tmux.conf
 tmux.conf.local
 
+*.bak
+
 # MacOS
 .DS_Store
