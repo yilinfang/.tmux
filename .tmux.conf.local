@@ -391,8 +391,8 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
-set -g status-keys vi
-set -g mode-keys vi
+# set -g status-keys vi
+# set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
@@ -416,6 +416,12 @@ set-option -sa terminal-overrides ",xterm*:Tc" # Fix wezterm and other xterm-bas
 # Enbale copy text from tmux (OSC 52 needed)
 # https://github.com/tmux/tmux/wiki/Clipboard
 set -g set-clipboard on
+
+# Enable enable passthrough mode
+# https://yazi-rs.github.io/docs/image-preview/#tmux
+set -g allow-passthrough on
+set -ga update-environment TERM
+set -ga update-environment TERM_PROGRAM
 
 # -- tpm -----------------------------------------------------------------------
 
